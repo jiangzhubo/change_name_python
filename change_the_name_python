@@ -4,6 +4,6 @@ address = sys.argv[1]
 for (dirpath, dirnames, filenames) in os.walk(address,topdown = False):
     for dirname in dirnames:
       	print os.path.join(dirpath, dirname)
-
+	newdirname = "image_assurance-" + dirname
 	print  os.path.join(dirpath, newdirname)
 	os.rename(os.path.join(dirpath, dirname), os.path.join(dirpath, newdirname))
